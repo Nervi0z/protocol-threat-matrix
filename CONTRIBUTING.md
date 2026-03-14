@@ -1,75 +1,71 @@
-# Guía de Contribución para GuiaElite-Protocolos-Defensa
+# Contributing
 
-¡Muchísimas gracias por tu interés en contribuir a la **Guía Elite de Protocolos para Defensa**! Valoramos enormemente el apoyo de la comunidad para hacer de esta guía la mejor referencia posible para Blue Teams, SOCs e Incident Responders.
+Thanks for taking the time to contribute. All help is welcome — corrections, new protocols, better detection notes, cleaner remediation steps.
 
-Este documento establece unas pautas para asegurar que las contribuciones sean efectivas, consistentes y beneficiosas para todos.
-
-## Código de Conducta
-
-Esperamos que todos los participantes en este proyecto sigan nuestro [**Código de Conducta**](CODE_OF_CONDUCT.md). Al participar, te comprometes a respetar este código para mantener un ambiente colaborativo y respetuoso.
-
-
-## ¿Cómo Puedo Contribuir?
-
-¡Toda ayuda es bienvenida! Aquí tienes algunas ideas:
-
-* **Reportando Errores:** ¿Ves información incorrecta, un enlace roto, un typo? ¡Infórmanos!
-* **Sugiriendo Mejoras:** ¿Ideas para mejorar la estructura, el formato, o añadir secciones útiles?
-* **Añadiendo Nuevos Protocolos:** ¿Falta algún protocolo crucial para defensa?
-* **Mejorando Protocolos Existentes:** ¿Puedes añadir más detalles sobre riesgos, indicadores de monitorización más sutiles, pasos de remediación más efectivos o enlaces a MITRE ATT&CK más precisos?
-* **Traducciones o Mejoras Lingüísticas:** Ayudar a que el lenguaje sea claro y preciso.
-
-## Reportando Errores o Sugiriendo Mejoras (Issues)
-
-La mejor forma de reportar errores o proponer ideas es a través de los **GitHub Issues**.
-
-1.  **Busca Issues Existentes:** Antes de crear uno nuevo, por favor, revisa si ya existe un issue similar [aquí](https://github.com/Nervi0zz0/GuiaElite-Protocolos-Defensa/issues) (¡Asegúrate de que el enlace apunta a tu repositorio!).
-2.  **Sé Claro y Detallado:**
-    * Para **Errores:** Describe el problema, dónde lo encontraste (qué protocolo/sección), qué esperabas y qué encontraste. Si puedes, sugiere la corrección.
-    * Para **Sugerencias:** Explica tu idea claramente, por qué crees que mejoraría la guía y cómo beneficiaría a los usuarios.
-3.  **Usa Etiquetas:** Si es posible, usa etiquetas como `bug`, `enhancement`, `documentation`, `new protocol` para clasificar tu issue.
-
-## Enviando Cambios Directamente (Pull Requests)
-
-Si quieres corregir algo o añadir contenido tú mismo/a, ¡genial! Sigue estos pasos:
-
-1.  **Haz un Fork:** Crea tu propia copia (fork) del repositorio `GuiaElite-Protocolos-Defensa` en tu cuenta de GitHub.
-2.  **Clona tu Fork:** Descarga tu fork a tu máquina local: `git clone https://github.com/TU_USUARIO/GuiaElite-Protocolos-Defensa.git`
-3.  **Crea una Rama:** Navega al directorio clonado y crea una rama nueva para tus cambios. Elige un nombre descriptivo:
-    ```bash
-    cd GuiaElite-Protocolos-Defensa
-    git checkout -b mejora-protocolo-smb # O el nombre que prefieras
-    ```
-4.  **Realiza tus Cambios:** Edita los archivos `.md`. **¡Importante!** Intenta seguir la Guía de Estilo detallada abajo.
-5.  **Haz Commit de tus Cambios:** Guarda tus cambios con mensajes claros que expliquen qué has hecho:
-    ```bash
-    git add .
-    git commit -m "fix: Corregir enlace ATT&CK en SMB"
-    # Ejemplos: feat: Añadir protocolo QUIC, docs: Mejorar descripción de riesgo en HTTP
-    ```
-6.  **Sube tu Rama:** Envía los cambios de tu rama local a tu fork en GitHub:
-    ```bash
-    git push origin mejora-protocolo-smb
-    ```
-7.  **Abre un Pull Request (PR):** Ve a tu fork en GitHub. Te aparecerá un botón para "Compare & pull request". Asegúrate de que la base sea el repositorio original (`Nervi0zz0/GuiaElite-Protocolos-Defensa` o el tuyo) y la rama `main`, y la comparación sea tu rama (`mejora-protocolo-smb`).
-8.  **Describe tu PR:** Rellena la descripción del Pull Request explicando tus cambios de forma clara y concisa. Si tu PR soluciona un Issue existente, menciónalo usando `Closes #NUMERO_DEL_ISSUE`.
-9.  **Revisión y Fusión:** Espera a que revisemos tu contribución. Podríamos pedirte algún ajuste o clarificación. Una vez aprobado, fusionaremos tu PR. ¡Gracias!
-
-## Guía de Estilo (¡Importante!)
-
-Para mantener la coherencia y la calidad "Elite" de esta guía:
-
-* **Formato General:** Sigue la estructura de las entradas existentes (Encabezado H3, línea de info clave, Riesgos, Monitorización, Remediación).
-* **Leyenda:** Respeta el uso de los iconos y el formato: `🔌 Puerto(s) | 🎯 Uso | 💀 Sev: ... | ⚠️ [[ID]](Link) Riesgo | 🔍 Monitorizar | 🛡️ Fix`.
-* **Concisión y Claridad:** Información directa y accionable.
-* **Markdown:** Usa `backticks` (\`) para `comandos`, `protocolos`, `puertos`, `EventIDs`, `nombres de fichero`, etc. Usa **negrita** para énfasis clave.
-* **Enlaces:** Verifica que los enlaces (RFCs, ATT&CK, Docs) funcionen y sean relevantes. Usa el formato `[[ID Táctica/Técnica]](Link)`.
-* **Severidad:** Usa las calaveras: 💀 (Bajo), 💀💀 (Medio), 💀💀💀 (Crítico).
-
-## ¿Preguntas sobre Contribuciones?
-
-Si tienes cualquier duda sobre el proceso de contribución, no dudes en abrir un **Issue** y plantear tu pregunta.
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
-¡Agradecemos de antemano tu tiempo y esfuerzo para mejorar esta guía!
+## Ways to contribute
+
+- **Bug reports:** Incorrect info, broken links, typos
+- **Improvements:** Better risk descriptions, more precise ATT&CK mappings, additional monitoring indicators
+- **New protocols:** Missing protocols relevant to defensive operations
+- **Style and clarity:** Cleaner phrasing, more actionable wording
+
+---
+
+## Reporting issues
+
+Open a [GitHub Issue](https://github.com/Nervi0zz0/blue-team-ref/issues). Before you do, check if one already exists.
+
+For **bugs**, describe what's wrong, where it is, and what the correct information should be.
+For **suggestions**, explain what you'd change and why it improves the reference.
+
+Use labels where relevant: `bug`, `enhancement`, `documentation`, `new-protocol`.
+
+---
+
+## Submitting a pull request
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/blue-team-ref.git`
+3. Create a branch with a descriptive name:
+   ```bash
+   cd blue-team-ref
+   git checkout -b fix-smb-attck-link
+   ```
+4. Make your changes, following the style guide below
+5. Commit with a clear message:
+   ```bash
+   git commit -m "fix: correct ATT&CK link in SMB section"
+   # Other examples:
+   # feat: add QUIC protocol entry
+   # docs: improve HTTP risk description
+   ```
+6. Push your branch: `git push origin fix-smb-attck-link`
+7. Open a pull request against `main`. If it closes an existing issue, include `Closes #NUMBER` in the description.
+
+---
+
+## Style guide
+
+Follow the structure used in existing entries:
+
+```
+### [Protocol Name](link-to-spec)
+**Port:** `port/proto` | **Use:** brief description | **Sev:** Low/Medium/Critical
+**Risk:** [[TACTIC/TECHNIQUE]](ATT&CK link) Description
+**Monitor:** Key indicators and anomalies
+**Fix:** 1. Step | 2. Step | 3. Step
+```
+
+- Use `backticks` for ports, commands, event IDs, file names, and protocol names
+- Use **bold** for emphasis on critical points
+- Keep entries concise and actionable — no padding
+- Verify all links (RFCs, ATT&CK, vendor docs) before submitting
+- Severity levels: Low / Medium / Critical
+
+---
+
+For any questions about the process, open an issue.
