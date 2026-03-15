@@ -235,7 +235,7 @@
     <line x1="40" y1="150" x2="660" y2="150" stroke="#0d1f3a" stroke-width="1" opacity="0" style="animation:pop .1s forwards 1.45s"/>
 
     <!-- main title -->
-    <text class="title" x="40" y="190">blue-team-ref</text>
+    <text class="title" x="40" y="190">protocol-threat-matrix</text>
 
     <!-- subtitle -->
     <text class="sub" x="42" y="208">protocol threat matrix · ATT&amp;CK mapped · event IDs · detection · remediation</text>

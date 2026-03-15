@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/img/header.svg" alt="blue-team-ref" width="100%"/>
+  <img src="./assets/img/header.svg" alt="protocol-threat-matrix" width="100%"/>
 </div>
 
 ---
