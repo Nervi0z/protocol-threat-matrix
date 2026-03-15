@@ -1,71 +1,57 @@
 # Contributing
 
-Thanks for taking the time to contribute. All help is welcome — corrections, new protocols, better detection notes, cleaner remediation steps.
-
-Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+Contributions are welcome: new protocols, corrected ATT&CK mappings, additional Event IDs, better detection signatures, and broken link fixes.
 
 ---
 
 ## Ways to contribute
 
-- **Bug reports:** Incorrect info, broken links, typos
-- **Improvements:** Better risk descriptions, more precise ATT&CK mappings, additional monitoring indicators
-- **New protocols:** Missing protocols relevant to defensive operations
-- **Style and clarity:** Cleaner phrasing, more actionable wording
-
----
-
-## Reporting issues
-
-Open a [GitHub Issue](https://github.com/Nervi0zz0/blue-team-ref/issues). Before you do, check if one already exists.
-
-For **bugs**, describe what's wrong, where it is, and what the correct information should be.
-For **suggestions**, explain what you'd change and why it improves the reference.
-
-Use labels where relevant: `bug`, `enhancement`, `documentation`, `new-protocol`.
+- **New protocol entry:** Open an [issue](https://github.com/Nervi0z/blue-team-ref/issues/new?template=add-protocol.md) first — describe the protocol, its abuse cases, and why it belongs here
+- **Correction:** Wrong Event ID, incorrect ATT&CK reference, broken link, outdated port — submit a pull request directly
+- **Better detection logic:** Improved Wireshark filter, more precise Event ID correlation, additional ATT&CK sub-technique mapping
+- **Typos and formatting:** Small fixes as pull requests without an issue
 
 ---
 
 ## Submitting a pull request
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/blue-team-ref.git`
-3. Create a branch with a descriptive name:
+2. Clone your fork:
    ```bash
-   cd blue-team-ref
-   git checkout -b fix-smb-attck-link
+   git clone https://github.com/YOUR_USERNAME/blue-team-ref.git
    ```
-4. Make your changes, following the style guide below
-5. Commit with a clear message:
+3. Create a descriptive branch:
    ```bash
-   git commit -m "fix: correct ATT&CK link in SMB section"
-   # Other examples:
-   # feat: add QUIC protocol entry
-   # docs: improve HTTP risk description
+   git checkout -b add-winrm-protocol
+   git checkout -b fix-kerberos-event-id-mapping
    ```
-6. Push your branch: `git push origin fix-smb-attck-link`
-7. Open a pull request against `main`. If it closes an existing issue, include `Closes #NUMBER` in the description.
+4. Edit `README.md`
+5. Commit with [Conventional Commits](https://www.conventionalcommits.org/) prefixes:
+   ```bash
+   git commit -m "feat: add WinRM to remote access section"
+   git commit -m "fix: correct T1558 sub-technique for Kerberoasting"
+   git commit -m "docs: add Event ID 4104 to PowerShell section"
+   ```
+6. Push and open a pull request against `main`. Reference any related issue with `Closes #NUMBER`
 
 ---
 
-## Style guide
+## Protocol entry format
 
-Follow the structure used in existing entries:
+Follow this structure exactly for new protocol entries:
 
+```markdown
+### [Protocol Name](link-to-rfc-or-official-docs)
+**Port:** `port/protocol` | **Use:** Legitimate purpose | **Sev:** Low/Medium/Critical
+**Risk:** [[TACTIC]](link) Description `[TECHNIQUE_ID]`
+**Monitor:** Key detection indicators.
+**Fix:** 1. Action | 2. Action | 3. Action.
 ```
-### [Protocol Name](link-to-spec)
-**Port:** `port/proto` | **Use:** brief description | **Sev:** Low/Medium/Critical
-**Risk:** [[TACTIC/TECHNIQUE]](ATT&CK link) Description
-**Monitor:** Key indicators and anomalies
-**Fix:** 1. Step | 2. Step | 3. Step
-```
 
-- Use `backticks` for ports, commands, event IDs, file names, and protocol names
-- Use **bold** for emphasis on critical points
-- Keep entries concise and actionable — no padding
-- Verify all links (RFCs, ATT&CK, vendor docs) before submitting
-- Severity levels: Low / Medium / Critical
+Quality criteria:
 
----
-
-For any questions about the process, open an issue.
+- ATT&CK references must link to the correct tactic or technique page
+- Event IDs must be verified against the relevant Windows version
+- Detection indicators must be specific and actionable — no generic advice
+- Wireshark filters must be tested and use display filter syntax
+- No emojis, no marketing language, no generic filler
